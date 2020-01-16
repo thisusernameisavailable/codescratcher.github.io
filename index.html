@@ -5,6 +5,7 @@
     <title>Sign up</title>
   </head>
   <body>
+    <button onclick="signup">Sign up</button>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 
@@ -34,10 +35,28 @@
       function writeUserData(userId, name, email, imageUrl) {
         database().ref('users/' + userId).set({
         username: name,
-        email: email,
+        password: email,
         profile_picture : imageUrl
   });
 }
+      function generate_random_string(string_length){
+    let random_string = '';
+    let random_ascii;
+    for(let i = 0; i < string_length; i++) {
+        random_ascii = Math.floor((Math.random() * 25) + 97);
+        random_string += String.fromCharCode(random_ascii)
+    }
+    return random_string
+}
+
+console.log(generate_random_string(5))
+      function signup() {
+        var userId = prompt("Username?");
+        var user = prompt("What should we call you?");
+        var password= prompt("What password?);
+        var
+      }
+      
     </script>
   </body>
 </html>
