@@ -52,7 +52,7 @@
         var user = prompt("What should we call you?");
         var password = prompt("What password?");
         var profilePic = prompt("Image url for profile:");
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        firebase.auth.CreateUserWithEmailAndPassword(email, password).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
