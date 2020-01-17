@@ -5,7 +5,7 @@
     <title>Sign up</title>
   </head>
   <body>
-    <button onclick="signup()">Sign up</button>
+    <button onclick="signup();">Sign up</button>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 
@@ -42,7 +42,7 @@
       function signup() {
         var userId = prompt("Username?");
         var user = prompt("What should we call you?");
-        var password = prompt("What password?);
+        var password = prompt("What password?");
         var profilePic = prompt("Image url for profile:");
         writeUserData(userId, user, password, profilePic);
       }
