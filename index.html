@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Sign up</title>
   </head>
-  <body>
+  <body> 
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <button onclick="signup();">Sign up</button>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
@@ -39,12 +41,23 @@
         profile_picture : imageUrl
   });
 }
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
       function signup() {
-        var userId = prompt("Username?");
+        var userId = prompt("Email?");
         var user = prompt("What should we call you?");
         var password = prompt("What password?");
         var profilePic = prompt("Image url for profile:");
-        writeUserData(userId, user, password, profilePic);
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
       }
       
     </script>
