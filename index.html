@@ -1,4 +1,44 @@
-// Hello.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+  </head>
+  <body>
+    <p id="root">Hi</p>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <button onclick="signup();">Sign up</button><body>
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCuyGRNaEdn1Tl4kErnE-xKrejplTU2zF8",
+    authDomain: "auther-b30de.firebaseapp.com",
+    databaseURL: "https://auther-b30de.firebaseio.com",
+    projectId: "auther-b30de",
+    storageBucket: "auther-b30de.appspot.com",
+    messagingSenderId: "134841285899",
+    appId: "1:134841285899:web:c255252a9da485426b760e",
+    measurementId: "G-3VXKSGT6S4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+    </script>
+    <script>
+      // Hello.
 //
 // This is JSHint, a tool that helps to detect errors and potential
 // problems in your JavaScript code.
@@ -47,3 +87,6 @@
 }
 
 ReactDOM.render(React.createElement(HelloMessage, { name: "Taylor" }), document.getElementById('hello-example'));
+    </script>
+  </body>
+</html>
